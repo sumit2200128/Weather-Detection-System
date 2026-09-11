@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <!-- Translation Dropdown -->
+        <div class="translate">
+            <select id="language" onchange="translateContent()">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="hi">हिंदी</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search">
+            <input type="text" id="city" placeholder="Enter City Name" spellcheck="false">
+            <button><img src="./searchimage.png" alt="Search"></button>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error">
+            <p id="error-message">Invalid City Name</p>
+        </div>
+
+        <!-- Weather Section -->
+        <div class="weather">
+            <img src="./Images/windImg.jpeg" class="weather-icon" alt="">
+            <h1 class="temp">22°C</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="./Images/humid-scaled.jpg" alt="Humidity Icon">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p id="humidity-label">Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="./Images/windImg.jpeg" alt="Wind Icon">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p id="wind-label">Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
